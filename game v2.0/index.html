@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wizard Runner</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+
+
+    <!-- Popup for help instructions -->
+    <div id="popup-1" class="popup">
+      <div class="overlay" onclick="togglePopup()"></div> <!-- Overlay to close popup on click -->
+      <div class="content">
+          <div class="close-btn" onclick="togglePopup()">&times;</div> <!-- Close button for the popup -->
+          <h2>Instructies</h2>
+          <p>  
+              <h1>Game</h1>
+              <p>Volg de instructies om je controller te verbinden met de game en de controller:</p>
+              <ol>
+                  <li>Verbind het apparaat via USB met je laptop of pc.</li>
+                  <li>Druk op de resetknop van het apparaat om het klaar te maken voor verbinding als het eventueel nodig is en druk op de (connect controller) KNOP onder de game.</li>
+                  <li>Druk op de <strong>Jump</strong>-knop (lichtsensor) om een jump action te maken en te springen door een schaduw te maken.</li>
+                  <li>Je kunt de <strong>Attack</strong>-knop (rechter knop) gebruiken om de de lange muren te breken.</li>
+                  <li>Gebruik de <strong>Stop / pauze</strong>-knop (linker knop) voor de game te kunnen starten of pauzeren.</li>
+                  <lit>*Click op de X om de popup te verwijderen*</lit>
+              </ol>
+          </p>
+      </div>
+  </div>
+
+        <!-- Popup over ons -->
+        <div id="popup-2" class="popup">
+          <div class="overlay" onclick="togglePopupoverons()"></div> <!-- Overlay to close popup on click -->
+          <div class="content">
+              <div class="close-btn" onclick="togglePopupoverons()">&times;</div> <!-- Close button for the popup -->
+                <h1>Over Ons</h1>
+                <p>Dit product is gemaakt door:</p>
+                <ul>
+                  <li><strong>Tom:</strong> Game en Web designer</li>
+                  <li><strong>Sana:</strong> Game en Web designer</li>
+                </ul>
+<h3>Samen met mijn duo-maatje hebben we een interactieve game ontwikkeld speciaal voor de open dag. Met sensoren en een ESP32 hebben we een simpel maar uitdagend spel gebouwd waarin je snelheid en precisie test. Scores worden live opgeslagen, en je kunt jouw plek in de highscore bekijken. Kom het zelf ervaren en ontdek wat je hier kunt leren — misschien werk jij binnenkort aan je eigen project! 🚀</h3>
+          
+          </div>
+      </div>
+    
+      <!-- sliders  -->
+    <div class="slidershort" reverse="true" style="
+    --width: 400px;
+    --height: 135px;
+    --quantity: 7;">
+
+    <div class="listshort">
+        <div class="itemshort" style="--position: 1">
+          <img src="photos/HvA_-_Hogeschool_van_Amsterdam_-_Logo.webp" alt="HVA">
+        </div>
+        <div class="itemshort" style="--position: 2">
+          <img src="photos/HvA_-_Hogeschool_van_Amsterdam_-_Logo.webp" alt="HVA">
+        </div>
+        <div class="itemshort" style="--position: 3">
+          <img src="photos/HvA_-_Hogeschool_van_Amsterdam_-_Logo.webp" alt="HVA">
+        </div>
+        <div class="itemshort" style="--position: 4">
+          <img src="photos/HvA_-_Hogeschool_van_Amsterdam_-_Logo.webp" alt="HVA">
+        </div>
+        <div class="itemshort" style="--position: 5">
+          <img src="photos/HvA_-_Hogeschool_van_Amsterdam_-_Logo.webp" alt="HVA">
+        </div>
+        <div class="itemshort" style="--position: 6">
+          <img src="photos/HvA_-_Hogeschool_van_Amsterdam_-_Logo.webp" alt="HVA">
+        </div>
+        <div class="itemshort" style="--position: 7">
+          <img src="photos/HvA_-_Hogeschool_van_Amsterdam_-_Logo.webp" alt="HVA">
+        </div>
+    </div>
+</div>
+
+
+<div class="banner">
+  <div class="slider" style="--quantity: 7">
+    <div class="item" style="--position: 1"><img src="photos/giphy.gif" alt="card1"></div>
+    <div class="item" style="--position: 2"><img src="photos/giphy.gif" alt="card2"></div>
+    <div class="item" style="--position: 3"><img src="photos/giphy.gif" alt="card3"></div>
+    <div class="item" style="--position: 4"><img src="photos/giphy.gif" alt="card4"></div>
+    <div class="item" style="--position: 5"><img src="photos/giphy.gif" alt="card5"></div>
+    <div class="item" style="--position: 6"><img src="photos/giphy.gif" alt="card6"></div>
+    <div class="item" style="--position: 7"><img src="photos/giphy.gif" alt="card7"></div>
+  </div>
+  
+  <div class="content">
+      <div class="title">
+        WIZARD RUNNER
+      </div>
+  </div>
+  </div>
+
+
+<!-- popup buttons   -->
+<header>
+  <div class="buttons">
+  <button onclick="togglePopup()">Help met controller?</button>
+  <button onclick="togglePopupoverons()">Over ons</button>
+  </div>
+  </header>
+
+  
+  <div class="footer">
+  </div>
+
+  <div id="game-container">
+  <!-- scripts  -->
+  <script src="https://unpkg.com/@gohai/p5.webserial@^1/libraries/p5.webserial.js"></script>
+  <script src="button.js"></script>
+  <div id="sketch-holder"></div>    
+  <script src="oop.js"></script>
+  </div>
+  </body>
+</html>
