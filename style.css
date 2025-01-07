@@ -36,6 +36,19 @@ header {
   z-index: 1;
 }
 
+.banner .content .model{
+  background-image: url(photos/player.png);
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+}
+
 .popup .content {
   position: fixed; /* Changed from absolute to fixed */
   top: 50%;
@@ -202,7 +215,7 @@ header {
 }
 
 
-.banner .slider .item img {
+.banner .slider .item img{
   width: 100%;
   height: 100%;
   object-fit: cover;
