@@ -12,6 +12,10 @@ let score = 0; // globaal score van je game
 // De preload functie wordt gebruikt om afbeeldingen en geluiden te laden
 function preload() {
   // Laadt hier eventuele geluiden en afbeeldingen
+  wallhit = loadSound('sound/explosion-91872.mp3');
+  fireballsound = loadSound('sound/fireball-whoosh-1-179125.mp3');
+  deathsound = loadSound('sound/orchestra-hit-240475.mp3');
+  jumpsound = loadSound('sound/retro-jump-3-236683.mp3');
 }
 var playerX = 0;
 var playerY = 450;
@@ -136,12 +140,18 @@ function draw() {
     if (sensorValue === 1 && !isJumping) {
       isJumping = true;
       velocity = jumpSpeed;
+      jumpsound.play();
+    } else{
+      jumpsound.stop();
     }
 
     if (sensorValue === 0) {
       let r = 20;
       let f = new Fire(playerX + 25, playerY - 25, r);
       fires.push(f);
+      fireballsound.play();
+    } else {
+      fireballsound.stop();
     }
 
     fill("white");
@@ -176,7 +186,10 @@ function draw() {
         ) {
           walls[i].reset(); // Reset wall when hit by fireball
           fires.splice(j, 1); // Remove fireball after collision
+          wallhit.play();
           break;
+        } else {
+          wallhit.stop();
         }
       }
 
@@ -239,6 +252,7 @@ function draw() {
     textSize(50);
     fill("white");
     text("Game Over\nScore:" + score, 0, 225);
+    deathsound.play();
   }
 }
 
