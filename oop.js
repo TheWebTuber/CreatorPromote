@@ -141,8 +141,7 @@ function draw() {
       isJumping = true;
       velocity = jumpSpeed;
       jumpsound.play();
-    } else{
-      jumpsound.stop();
+    }
     }
 
     if (sensorValue === 0) {
@@ -150,8 +149,6 @@ function draw() {
       let f = new Fire(playerX + 25, playerY - 25, r);
       fires.push(f);
       fireballsound.play();
-    } else {
-      fireballsound.stop();
     }
 
     fill("white");
