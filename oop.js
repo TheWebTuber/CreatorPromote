@@ -141,8 +141,7 @@ function draw() {
       isJumping = true;
       velocity = jumpSpeed;
       jumpsound.play();
-    }
-    }
+    } 
 
     if (sensorValue === 0) {
       let r = 20;
