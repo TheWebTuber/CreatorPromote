@@ -67,11 +67,11 @@
    }
    .slider .list .item .content {
      position: absolute;
-     top: 20%;
+     top: 15%;
      left: 50%;
      transform: translateX(-50%);
      width: max-content;
-     max-width: 100%;
+     max-width: 90%;
      text-align: center;
      display: grid;
      grid-template-columns: repeat(2, 400px);
@@ -81,15 +81,17 @@
      text-transform: uppercase;
      font-family: 'Press Start 2P', sans-serif;
      text-shadow: 0 0 80px #000;
+     line-height: 1.2; /* Adjust as needed */
    }
    .slider .list .item .content h2 {
-     font-size: 75px;
+     font-size: 60px;
      font-family: 'Press Start 2P', sans-serif;
      line-height: 0.9em;
      transform: translateY(-100%);
      transition: transform 1s;
      grid-row-start: 1;
      grid-row-end: 3;
+     line-height: 1.1; /* Adjust as needed */
    }
    .slider .list .item .content p:last-child {
      display: flex;
@@ -237,7 +239,7 @@
      .slider .list .item .content {
        grid-template-columns: 80%;
        justify-content: center;
-       gap: 20px;
+       gap: 50px;
        top: 70px;
      }
      .slider .list .item .content h2 {
