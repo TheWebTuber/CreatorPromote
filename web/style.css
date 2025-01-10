@@ -1,21 +1,7 @@
 body{
-  background-color: rgb(0, 0, 0);
-  font-family: 'Press Start 2P', sans-serif;
+  background-color: rgb(79, 237, 255);
 }
 
-/* Style the header */
-.header {
-  padding: 20px;
-  text-align: center;
-  z-index: 100;
-}
-
-header {
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 100;
-}
 
    /* Style the header */
    .header {
@@ -78,29 +64,17 @@ header {
   z-index: 1;
 }
 
-.banner .content .model{
-  background-image: url(photos/player.png);
-  width: 100%;
-  height: 75vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-size: auto 130%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  z-index: 1;
-}
-
 .popup .content {
   position: fixed; /* Changed from absolute to fixed */
   top: 50%;
-  left: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Center and scale */
   background: #fff;
   width: 800px;
-  height: 550px;
-  z-index: 20;
+  height: 350px;
+  z-index: 2;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   box-sizing: border-box;
   transition: transform 300ms ease-in-out; /* Smooth transition */
 }
@@ -111,11 +85,10 @@ header {
 
 .popup .close-btn {
   cursor: pointer;
-  position: right;
+  position: absolute;
   right: 20px;
   top: 20px;
   height: 30px;
-  font-family: 'Press Start 2P', sans-serif;
   font-size: 25px;
   font-weight: 600;
   line-height: 30px;
@@ -128,11 +101,11 @@ header {
 }
 
 .buttons button {
-  background-color: rgba(1, 0, 39, 0.736);
+  background-color: rgba(20, 11, 117, 0.736);
   border: none;
-  font-family: 'Press Start 2P';
+  font-family: monospace;
   width: 298px;
-  height: 60px;
+  height: 40px;
   border-radius: 5px;
   font-size: x-large;
   color: #eee;
@@ -205,80 +178,4 @@ header {
 .footer {
   padding: 20px;
   text-align: center;
-}
-
-
-.banner {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.banner .slider {
-  position: absolute;
-  width: 200px;
-  height: 250px;
-  top: 10%;
-  left: calc(50% - 100px);
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  animation: autoRun 20s linear infinite;
-  z-index: 2;
-}
-
-@keyframes autoRun {
-  from {
-    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg) rotateZ(180deg);
-  }
-  to {
-    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg) rotateZ(180deg);
-  }
-}
-
-.banner .slider .item {
-  position: absolute;
-  inset: 0 0 0 0;
-  transform: rotateY(
-      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-    )
-    translateZ(550px);
-}
-
-.banner .content .title {
-  position: relative;
-  bottom: 500px;
-  left: 34%;
-  color: rgb(255, 255, 255); /* Make the text white */
-  font-size: 36px; /* Set the text size to be big */
-  z-index: 100;
-  text-shadow: 0 10px 20px #efff0ab8;
-}
-
-
-.banner .slider .item img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.banner .content {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1400px, 100vw);
-  height: max-content;
-  padding-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-  text-shadow: 0 10px 20px #c00000; /* Change shadow color */
-}
-
-.banner .content h1 {
-  font-size: 5em;
 }

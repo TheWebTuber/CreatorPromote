@@ -10,7 +10,6 @@
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -19,30 +18,31 @@
       <div class="topnav">
         <a href="https://creatorpromote.com/">Home</a>
         <a href="https://creatorpromote.com/sprint">Sprint</a>
+        <a href="https://creatorpromote.com/game1">game1</a>
       </div>
   </header>
 
-
     <!-- Popup for help instructions -->
     <div id="popup-1" class="popup">
-      <div class="overlay" onclick="togglePopup()"></div> <!-- Overlay to close popup on click -->
-      <div class="content">
-          <div class="close-btn" onclick="togglePopup()">&times;</div> <!-- Close button for the popup -->
-          <h2>Instructies</h2>
-          <p>  
-              <h1>Game</h1>
-              <p>Volg de instructies om je controller te verbinden met de game en de controller:</p>
-              <ol>
-                  <li>Verbind het apparaat via USB met je laptop of pc.</li>
-                  <li>Druk op de resetknop van het apparaat om het klaar te maken voor verbinding als het eventueel nodig is en druk op de (connect controller) KNOP onder de game.</li>
-                  <li>Druk op de <strong>Jump</strong>-knop (lichtsensor) om een jump action te maken en te springen door een schaduw te maken.</li>
-                  <li>Je kunt de <strong>Attack</strong>-knop (rechter knop) gebruiken om de de lange muren te breken.</li>
-                  <li>Gebruik de <strong>Stop / pauze</strong>-knop (linker knop) voor de game te kunnen starten of pauzeren.</li>
-                  <lit>*Click op de X om de popup te verwijderen*</lit>
-              </ol>
-          </p>
-      </div>
-  </div>
+        <div class="overlay" onclick="togglePopup()"></div> <!-- Overlay to close popup on click -->
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div> <!-- Close button for the popup -->
+            <h2>Instructies</h2>
+            <p>  
+                <h1>Game</h1>
+                <p>Volg de instructies om je controller te verbinden met de game en de controller:</p>
+                <ol>
+                    <li>Verkrijg of maak een weerapparaat met een ESP32-S3 microcontroller en programmeer deze.</li>
+                    <li>Verbind het apparaat via USB met je laptop of pc.</li>
+                    <li>Druk op de resetknop van het apparaat om het klaar te maken voor verbinding als het eventueel nodig is.</li>
+                    <li>Druk op de <strong>J</strong>-knop (lightsensor) om een jump action te maken en te springen.</li>
+                    <li>Je kunt de <strong>A</strong>-knop (BLAUWE DHT SENSOR) gebruiken om de de lange muren te breken.</li>
+                    <li>Gebruik de <strong>S</strong>-knop voor de game te kunnen starten.</li>
+                    <lit>*Click waar je maar wilt om uit de popup te gaan*</lit>
+                </ol>
+            </p>
+        </div>
+    </div>
 
         <!-- Popup over ons -->
         <div id="popup-2" class="popup">
@@ -92,28 +92,6 @@
 </div>
 
 
-<div class="banner">
-  <div class="slider" style="--quantity: 7">
-    <div class="item" style="--position: 1"><img src="photos/giphy.gif" alt="card1"></div>
-    <div class="item" style="--position: 2"><img src="photos/giphy.gif" alt="card2"></div>
-    <div class="item" style="--position: 3"><img src="photos/giphy.gif" alt="card3"></div>
-    <div class="item" style="--position: 4"><img src="photos/giphy.gif" alt="card4"></div>
-    <div class="item" style="--position: 5"><img src="photos/giphy.gif" alt="card5"></div>
-    <div class="item" style="--position: 6"><img src="photos/giphy.gif" alt="card6"></div>
-    <div class="item" style="--position: 7"><img src="photos/giphy.gif" alt="card7"></div>
-  </div>
-  
-  <div class="content">
-      <div class="title">
-        WIZARD RUNNER
-      </div>
-      <div class="model">
-        <img src="" alt="">
-      </div>
-  </div>
-  </div>
-
-
 <!-- popup buttons   -->
 <header>
   <div class="buttons">
@@ -122,9 +100,6 @@
   </div>
   </header>
 
-  
-  <div class="footer">
-  </div>
   <div class="footer">
   </div>
 
@@ -134,10 +109,6 @@
   <script src="button.js"></script>
   <div id="sketch-holder"></div>    
   <script src="oop.js"></script>
-  <script src="classes/Barrel.js"></script>
-  <script src="classes/Fire.js"></script>
-  <script src="classes/Wall.js"></script>
-  <script src="classes/Wind.js"></script>
   </div>
   </body>
 </html>
