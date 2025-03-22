@@ -41,14 +41,10 @@ body {
     transition: transform 0.2s ease-out;
 }
 
-.layer-1 {
-    transform: translateZ(30px);
-}
-
-.layer-2 {
-    transform: translateZ(60px);
-}
-
-.layer-3 {
-    transform: translateZ(90px);
-}
+/* Adjusting depth for more layers */
+.layer-1 { transform: translateZ(20px); }
+.layer-2 { transform: translateZ(40px); }
+.layer-3 { transform: translateZ(60px); }
+.layer-4 { transform: translateZ(80px); }
+.layer-5 { transform: translateZ(100px); }
+.layer-6 { transform: translateZ(120px); }
