@@ -10,7 +10,7 @@ document.querySelectorAll('.card').forEach(card => {
         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
         card.querySelectorAll('.layer').forEach((layer, index) => {
-            let depth = (index + 1) * 20;
+            let depth = (index + 1) * 20; // Adjusted depth for 6 layers
             layer.style.transform = `translateZ(${depth}px) translateX(${x * depth}px) translateY(${y * depth}px)`;
         });
     });
