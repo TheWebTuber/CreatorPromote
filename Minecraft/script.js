@@ -22,7 +22,7 @@ async function fetchStatus() {
       const bedrockPlayers = bedrockData.players?.online || 0;
       const totalPlayers = javaPlayers + bedrockPlayers;
 
-      statusBox.textContent = `✅ Server is ONLINE with ${totalPlayers} player(s) (Java: ${javaPlayers}, Bedrock: ${bedrockPlayers})`;
+      statusBox.textContent = `✅ Server is ONLINE with ${totalPlayers} player(s)`;
       statusBox.className = 'status-box status-online';
       infoBox.classList.remove('hidden');
 
