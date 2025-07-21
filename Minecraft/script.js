@@ -16,24 +16,27 @@ async function fetchStatus() {
 
     const javaOnline = javaData.online;
     const bedrockOnline = bedrockData.online;
+    const allOnline = javaOnline || bedrockOnline;
 
-    if (javaOnline || bedrockOnline) {
-      const javaPlayers = javaData.players?.online || 0;
-      const bedrockPlayers = bedrockData.players?.online || 0;
-      const totalPlayers = javaPlayers + bedrockPlayers;
+    if (allOnline) {
+      const playerNames = new Set();
 
-      statusBox.textContent = `✅ Server is ONLINE with ${totalPlayers} player(s)`;
+      if (javaData.players?.list) {
+        javaData.players.list.forEach(p => playerNames.add(p.name_raw));
+      }
+
+      if (bedrockData.players?.list) {
+        bedrockData.players.list.forEach(p => playerNames.add(p.name_raw));
+      }
+
+      const totalPlayers = playerNames.size;
+
+      statusBox.textContent = `✅ Server is ONLINE with ${totalPlayers} player(s) online`;
       statusBox.className = 'status-box status-online';
       infoBox.classList.remove('hidden');
 
       playerList.innerHTML = '';
-
-      const playerNames = [
-        ...(javaData.players?.list?.map(p => p.name_raw) || []),
-        ...(bedrockData.players?.list?.map(p => p.name_raw) || [])
-      ];
-
-      if (playerNames.length > 0) {
+      if (totalPlayers > 0) {
         playerNames.forEach(name => {
           const li = document.createElement('li');
           li.textContent = name;
