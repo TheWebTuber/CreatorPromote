@@ -70,3 +70,29 @@ ul#players li {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
+.server-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.server-block {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* On tablets and up, arrange side by side */
+@media (min-width: 768px) {
+  .server-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .server-block {
+    flex: 1;
+    max-width: 45%;
+  }
+}
+
