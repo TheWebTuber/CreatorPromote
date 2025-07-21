@@ -20,8 +20,8 @@ body {
 }
 
 h1 {
-  color: rgb(0, 21, 255);
-  text-shadow: 0 0 5px #0ff;
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 5px rgba(75, 0, 0, 0.679);
 }
 
 .status-box {
