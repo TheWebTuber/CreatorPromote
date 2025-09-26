@@ -1,42 +1,47 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minecraft Server Status</title>
-  <link rel="stylesheet" href="style.css" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Server Status</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Creator Promote Universal SMP" />
-<meta property="og:description" content="Play with friends or meet new creators in an awesome survival world! Join our 24/7 online SMP — fully cross-platform for Java and Bedrock players. Build, explore, and have fun together anytime!" />
-<meta property="og:image" content="https://creatorpromote.com/img/CreatorPromoteUniversalSMP.png" />
-<meta property="og:url" content="https://creatorpromote.com/minecraft" />
-<meta property="og:type" content="website" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Creator Promote Universal SMP" />
+    <meta
+      property="og:description"
+      content="Play with friends or meet new creators in an awesome survival world! Join our 24/7 online SMP — fully cross-platform for Java and Bedrock players. Build, explore, and have fun together anytime!"
+    />
+    <meta
+      property="og:image"
+      content="https://creatorpromote.com/img/CreatorPromoteUniversalSMP.png"
+    />
+    <meta property="og:url" content="https://creatorpromote.com/minecraft" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Creator Promote Universe SMP</h1>
+      <div id="status" class="status-box">Checking server status...</div>
+      <div id="server-info" class="server-info hidden">
+        <div class="server-grid">
+          <div class="server-block">
+            <p><strong>Java Edition</strong></p>
+            <p><strong>IP:</strong> mc.creatorpromote.com</p>
+            <p><strong>Port:</strong> 25565</p>
+          </div>
+          <div class="server-block">
+            <p><strong>Bedrock Edition</strong></p>
+            <p><strong>IP:</strong> mc.creatorpromote.com</p>
+            <p><strong>Port:</strong> 19132</p>
+          </div>
+        </div>
 
+        <h3>Players Online</h3>
 
-</head>
-<body>
-  <div class="container">
-    <h1>Creator Promote Universe SMP</h1>
-    <div id="status" class="status-box">Checking server status...</div>
-    <div id="server-info" class="server-info hidden">
-
-<div class="server-grid">
-  <div class="server-block">
-    <p><strong>Java Edition</strong></p>
-    <p><strong>IP:</strong> mc.creatorpromote.com</p>
-    <p><strong>Port:</strong> 25565</p>
-  </div>
-  <div class="server-block">
-    <p><strong>Bedrock Edition</strong></p>
-    <p><strong>IP:</strong> mc.creatorpromote.com</p>
-    <p><strong>Port:</strong> 19132</p>
-  </div>
-</div>
-
-      <h3>Players Online</h3>
-      <ul id="players"></ul>
+        <ul id="players"></ul>
+      </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
