@@ -112,7 +112,7 @@
 
   .info-box3 {
     margin-top: 20px; /* sets top margin to 20px */
-    border: 2px solid #1ee204e8;
+    border: 2px solid #2336e6e8;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -177,7 +177,7 @@
   .linkT {
     display: block;
     margin-top: 20px;
-    color: #ff0e8fe8;
+    color: #ff61b5e8;
     text-decoration: none;
     font-weight: bold;
   }
