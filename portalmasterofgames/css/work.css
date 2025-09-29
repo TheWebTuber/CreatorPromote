@@ -18,6 +18,13 @@
     z-index: 100;
   }
 
+  h2 {
+  border-bottom: 2px solid #e60000e2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #f2f2f2;
+}
+
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
@@ -150,6 +157,47 @@
   .footer {
     color: #f2f2f2;
     text-align: center;
+  }
+
+  .footer2 {
+    color: #f2f2f2;
+    text-align: center;
+    width: auto;
+  }
+  .footer2 a {
+    font-size: 45px;
+  }
+
+  .footer2 img {
+    width: 100%;
+  }
+  /* Content Items */
+  .content-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .content-item p {
+    flex: 1;
+    color: #ddd;
+  }
+
+  /* Thumbnail Styling (inside the container) */
+  .content-item img {
+    width: 750px;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .imgbanner img {
+    width: 100%;
   }
 
   .slidershort {
@@ -365,6 +413,47 @@
   .footer {
     color: #000000;
     text-align: center;
+  }
+
+  .footer2 {
+    color: #f2f2f2;
+    text-align: center;
+    width: auto;
+  }
+  .footer2 a {
+    font-size: 45px;
+  }
+
+  .footer2 img {
+    width: 100%;
+  }
+  /* Content Items */
+  .content-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .content-item p {
+    flex: 1;
+    color: #ddd;
+  }
+
+  /* Thumbnail Styling (inside the container) */
+  .content-item img {
+    width: 750px;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .imgbanner img {
+    width: 100%;
   }
 
   .slidershort {
@@ -588,6 +677,47 @@
     text-align: center;
   }
 
+  .footer2 {
+    color: #f2f2f2;
+    text-align: center;
+    width: auto;
+  }
+  .footer2 a {
+    font-size: 45px;
+  }
+
+  .footer2 img {
+    width: 100%;
+  }
+  /* Content Items */
+  .content-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .content-item p {
+    flex: 1;
+    color: #ddd;
+  }
+
+  /* Thumbnail Styling (inside the container) */
+  .content-item img {
+    width: 750px;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .imgbanner img {
+    width: 100%;
+  }
+
   .slidershort {
     width: 100%;
     height: var(--height);
@@ -642,6 +772,23 @@
     to {
       left: 100%;
     }
+  }
+
+  .content-item {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items */
+    text-align: center; /* Centers text */
+  }
+
+  .content-item img {
+    margin-bottom: 1rem; /* Adds space between the image and text */
+  }
+
+  /* Thumbnail Styling (inside the container) */
+  .content-item img {
+    width: 200px;
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
@@ -813,6 +960,47 @@
     text-align: center;
   }
 
+  .footer2 {
+    color: #f2f2f2;
+    text-align: center;
+    width: auto;
+  }
+  .footer2 a {
+    font-size: 45px;
+  }
+
+  .footer2 img {
+    width: 100%;
+  }
+  /* Content Items */
+  .content-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .content-item p {
+    flex: 1;
+    color: #ddd;
+  }
+
+  /* Thumbnail Styling (inside the container) */
+  .content-item img {
+    width: 750px;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .imgbanner img {
+    width: 100%;
+  }
+
   .slidershort {
     width: 100%;
     height: var(--height);
@@ -867,5 +1055,21 @@
     to {
       left: 100%;
     }
+  }
+  .content-item {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items */
+    text-align: center; /* Centers text */
+  }
+
+  .content-item img {
+    margin-bottom: 1rem; /* Adds space between the image and text */
+  }
+
+  /* Thumbnail Styling (inside the container) */
+  .content-item img {
+    width: 200px;
+    height: auto; /* Maintain aspect ratio */
   }
 }
