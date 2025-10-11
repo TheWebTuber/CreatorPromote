@@ -5,6 +5,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 nav {
@@ -249,7 +250,6 @@ main {
   color: #6f00ff; /* Optional: Change text color for better contrast */
 }
 
-
 /* Mobile */
 @media (max-width: 600px) {
   .video-slider {
@@ -266,7 +266,7 @@ main {
     padding: 0.5rem;
   }
   .disclaimer {
-  font-size: 5px; /* Smaller font size */
-  line-height: 0.5; /* Adjust line height for readability */
-}
+    font-size: 12px; /* Adjusted font size for better readability */
+    line-height: 1.5; /* Adjust line height for readability */
+  }
 }
