@@ -267,5 +267,6 @@ main {
   }
   .disclaimer {
   font-size: 5px; /* Smaller font size */
+  line-height: 0.5; /* Adjust line height for readability */
 }
 }
