@@ -127,32 +127,6 @@ function autoScrollSlider(sliderId, speed = 0.5) {
   }, 30);
 }
 
-const glitchTextElement = document.getElementById("glitch-text");
-const glitchTextElement2 = document.getElementById("glitch-text-2");
-
-const originalText = "&ikuytrf";
-
-function getRandomGlitch() {
-  const characters =
-    "!@#$%^&*()_+[]{}|;:',.<>?/~`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let glitch = "";
-  for (let i = 0; i < originalText.length; i++) {
-    glitch +=
-      Math.random() < 0.2
-        ? originalText[i]
-        : characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return glitch;
-}
-
-function updateGlitchText() {
-  glitchTextElement.textContent = getRandomGlitch();
-  glitchTextElement2.textContent = getRandomGlitch();
-}
-
-// Update the glitch text every 100 milliseconds
-setInterval(updateGlitchText, 100);
-
 window.onload = function () {
   updateSlide();
   renderSlider("games", "games-slider");
