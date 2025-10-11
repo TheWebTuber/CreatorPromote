@@ -180,11 +180,11 @@ main {
   box-shadow: 0 8px 32px rgba(255, 135, 173, 0.25);
 }
 
-  .footer2 {
-    color: #000000;
-    text-align: center;
-    width: auto;
-  }
+.footer2 {
+  color: #000000;
+  text-align: center;
+  width: auto;
+}
 
 /* Mobile */
 @media (max-width: 600px) {
@@ -258,4 +258,10 @@ main {
   transform: scale(1.15);
   background: #ff87ad;
   box-shadow: 0 4px 16px #ff87ad55;
+}
+
+.disclaimer {
+  font-size: 15px; /* Smaller font size */
+  line-height: 2; /* Adjust line height for readability */
+  color: #6f00ff; /* Optional: Change text color for better contrast */
 }
