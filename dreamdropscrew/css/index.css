@@ -265,4 +265,7 @@ main {
     min-width: 130px;
     padding: 0.5rem;
   }
+  .disclaimer {
+  font-size: 5px; /* Smaller font size */
+}
 }
