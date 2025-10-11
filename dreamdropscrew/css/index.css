@@ -245,9 +245,11 @@ main {
 }
 
 .disclaimer {
-  font-size: 15px; /* Smaller font size */
-  line-height: 2; /* Adjust line height for readability */
-  color: #6f00ff; /* Optional: Change text color for better contrast */
+  font-size: 0.9rem; /* Adjust font size */
+  line-height: 1.4; /* Adjust line height for readability */
+  color: #666; /* Optional: Change text color for better contrast */
+  text-align: center; /* Center the text */
+  margin: 1rem 0; /* Add some margin */
 }
 
 /* Mobile */
