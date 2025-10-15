@@ -9,7 +9,7 @@ const slides = [
   },
   {
     title: "Follow us, share and enjoy!",
-    text: "Be sure to stay tuned for the newest streams or content, either on Youtube or on Twitch! Did you know our patereon is free too?",
+    text: "Be sure to stay tuned for the newest streams or content, either on Youtube or on Twitch! Did you know our patreon is free too?",
   },
 ];
 
