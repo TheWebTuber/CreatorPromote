@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0b0f19;
+  color: #e0e6f0;
+  overflow-x: hidden;
+}
+
+header {
+  background: #08122a;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  font-size: 1.5em;
+  color: #1e90ff;
+  letter-spacing: 1px;
+}
+
+header button {
+  background: #1e90ff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header button:hover {
+  background: #005ecb;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  padding: 80px 20px;
+  transition: opacity 0.4s;
+}
+
+.active {
+  display: block;
+}
+
+.slide h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1e90ff;
+}
+
+.slide p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  color: #cfd7e6;
+  line-height: 1.6;
+}
+
+.next-btn {
+  margin-top: 30px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+  background: #005ecb;
+}
+
+/* Login popup */
+.login-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: #101a33;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(30,144,255,0.3);
+  width: 280px;
+  text-align: center;
+}
+
+.login-box h3 {
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 4px;
+  background: #1a223b;
+  color: white;
+}
+
+.login-box button {
+  background: #1e90ff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.login-box button:hover {
+  background: #005ecb;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #08122a;
+  font-size: 0.9em;
+  color: #a0a8bb;
+}
