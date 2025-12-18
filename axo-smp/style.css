@@ -1,0 +1,130 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+body {
+background: black;
+color: white;
+font-family: Arial, sans-serif;
+}
+
+
+.memory {
+width: 100vw;
+height: 100vh;
+padding: 40px;
+}
+
+
+.title {
+text-align: center;
+margin-bottom: 20px;
+letter-spacing: 2px;
+}
+
+
+.memory-container {
+position: relative;
+width: 50%;
+height: 60%;
+margin: auto;
+cursor: pointer;
+}
+
+
+.media {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+.cutout {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+pointer-events: auto;
+}
+
+
+.story {
+max-width: 600px;
+margin: 30px auto;
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.5s ease;
+}
+
+
+.story.show {
+opacity: 1;
+transform: translateY(0);
+}
+/* 3D context */
+.memory-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* Layers must be absolute */
+.media,
+.cutout {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Base depth */
+.media {
+  transform: translateZ(20px);
+}
+
+.cutout {
+  transform: translateZ(60px);
+}
+
+
+
+
+
+/* -------- RESPONSIVE FIXES -------- */
+
+/* Phones */
+@media (max-width: 768px) {
+  .memory {
+    padding: 20px 15px;
+  }
+
+  .memory-container {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .story {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .memory-container {
+    max-width: 280px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+}
