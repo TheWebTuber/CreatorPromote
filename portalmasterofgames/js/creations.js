@@ -1,8 +1,6 @@
 const gallery = document.getElementById("gallery");
-// Correct folder path
-const folder = "portalmasterofgames/gifs/";
+const folder = "gifs/"; // actual folder on server
 
-// Load JSON
 fetch("gifs.json")
   .then(res => res.json())
   .then(gifs => {
@@ -13,12 +11,12 @@ fetch("gifs.json")
         card.className = "card";
 
         const img = document.createElement("img");
+        // Use raw filename for preview so it loads correctly
         img.src = folder + file;
 
         const info = document.createElement("div");
         info.className = "info";
 
-        // Clean filename (remove .gif)
         const name = file.replace(/\.[^/.]+$/, "");
 
         const title = document.createElement("div");
@@ -30,7 +28,7 @@ fetch("gifs.json")
         button.textContent = "Copy Link";
 
         button.onclick = () => {
-            // Encode the file name to handle spaces and special characters
+            // Encode filename for safe URL copying
             const url = window.location.origin + "/" + folder + encodeURIComponent(file);
 
             navigator.clipboard.writeText(url).then(() => {
