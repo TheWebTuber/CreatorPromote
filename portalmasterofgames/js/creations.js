@@ -1,5 +1,6 @@
 const gallery = document.getElementById("gallery");
-const folder = "gifs/"; // actual folder on server
+// Correct folder path for URL and images
+const folder = "portalmasterofgames/gifs/"; // <— include the subfolder
 
 fetch("gifs.json")
   .then(res => res.json())
@@ -11,7 +12,7 @@ fetch("gifs.json")
         card.className = "card";
 
         const img = document.createElement("img");
-        // Use raw filename for preview so it loads correctly
+        // For preview: use the correct folder path but don't encode for HTML
         img.src = folder + file;
 
         const info = document.createElement("div");
@@ -30,7 +31,6 @@ fetch("gifs.json")
         button.onclick = () => {
             // Encode filename for safe URL copying
             const url = window.location.origin + "/" + folder + encodeURIComponent(file);
-
             navigator.clipboard.writeText(url).then(() => {
                 button.textContent = "Copied!";
                 setTimeout(() => {
