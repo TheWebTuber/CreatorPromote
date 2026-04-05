@@ -1,5 +1,6 @@
 const gallery = document.getElementById("gallery");
-const folder = "gifs/";
+// Correct folder path
+const folder = "portalmasterofgames/gifs/";
 
 // Load JSON
 fetch("gifs.json")
@@ -29,7 +30,8 @@ fetch("gifs.json")
         button.textContent = "Copy Link";
 
         button.onclick = () => {
-            const url = window.location.origin + "/" + folder + file;
+            // Encode the file name to handle spaces and special characters
+            const url = window.location.origin + "/" + folder + encodeURIComponent(file);
 
             navigator.clipboard.writeText(url).then(() => {
                 button.textContent = "Copied!";
