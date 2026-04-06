@@ -88,10 +88,7 @@ body {
 }
 
 .about-image {
-    flex: 1;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid #222;
+    display: none;
 }
 
 .about-image img {
@@ -182,6 +179,15 @@ h2 {
     .about {
         flex-direction: column;
     }
+
+    .about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #222;
+    display: block;
+    }
+
 
     .about-image {
         width: 100%;
