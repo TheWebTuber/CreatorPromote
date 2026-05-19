@@ -5,118 +5,216 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-    background: radial-gradient(circle at top, #1a1a1a, #000000);
-    color: white;
+html {
+    scroll-behavior: smooth;
 }
 
-/* GENERAL SECTIONS */
+body {
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(circle at top left, rgba(255, 0, 85, 0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255, 170, 0, 0.12), transparent 30%),
+        #0b0b0b;
+
+    color: white;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+/* GLOBAL */
 section {
-    padding: 60px 20px;
-    text-align: center;
+    width: 100%;
+    padding: 25px 20px;
 }
 
 /* HERO */
 .hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
     padding-top: 50px;
+    padding-bottom: 25px;
 }
 
 .avatar {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    width: min(40vw, 210px);
+
+    aspect-ratio: 1/1;
+
     object-fit: cover;
+
+    border-radius: 22px;
+
+    border: 2px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 25px rgba(255, 0, 85, 0.22),
+        0 0 55px rgba(255, 170, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.02);
 }
 
 .hero h1 {
-    font-size: 2rem;
+    margin-top: 18px;
 
-    background: linear-gradient(#a6e3fc, #f1f7f6);
+    font-size: clamp(2rem, 5vw, 3.8rem);
+
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #ff3366,
+        #ffaa00,
+        #ff66cc
+    );
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .tagline {
-    opacity: 0.7;
     margin-top: 10px;
+
+    opacity: 0.7;
+
+    font-size: 0.95rem;
+
+    max-width: 550px;
 }
 
-/* ABOUT */
-.about {
-    max-width: 700px;
-    margin: auto;
-    height: 200px;
+/* CONTENT CARDS */
+.about,
+.links {
+    width: min(100%, 950px);
+
+    margin: 0 auto 18px auto;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,0.045);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(12px);
 }
 
-.about h2 {
-    margin-bottom: 15px;
+.about h2,
+.links h2 {
+    margin-bottom: 14px;
+
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+
+    font-weight: 700;
 }
 
 .about p {
-    opacity: 0.8;
-    line-height: 1.6;
+    margin-bottom: 12px;
+
+    line-height: 1.7;
+
+    opacity: 0.86;
 }
 
 /* LINKS */
-.links h2 {
-    margin-bottom: 20px;
-}
-
 .link-buttons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+
     gap: 12px;
-    align-items: center;
+
+    margin-top: 18px;
 }
 
 .link-buttons a {
-    width: 80%;
-    max-width: 300px;
-
-    padding: 12px;
     text-decoration: none;
+
     color: white;
 
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 18px;
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.25s ease;
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border 0.2s ease;
 }
 
 .link-buttons a:hover {
-    background: linear-gradient(90deg, #ff0055, #ffaa00);
-    color: black;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 0, 85, 0.18),
+            rgba(255, 170, 0, 0.18)
+        );
+
+    border: 1px solid rgba(255,255,255,0.16);
 }
 
 /* FOOTER */
 footer {
+    max-width: 950px;
+
+    margin: 10px auto 40px auto;
+
+    padding: 0 20px;
+
     text-align: center;
-    padding: 30px;
-    opacity: 0.5;
+
+    font-size: 0.82rem;
+
+    opacity: 0.55;
+
+    line-height: 1.6;
 }
 
 /* TABLET */
-@media (min-width: 600px) {
-    .hero h1 {
-        font-size: 2.5rem;
+@media (min-width: 700px) {
+
+    section {
+        padding: 35px 30px;
+    }
+
+    .about,
+    .links {
+        padding: 38px;
     }
 
     .link-buttons {
-        flex-direction: row;
-        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* DESKTOP */
-@media (min-width: 900px) {
-    section {
-        padding: 80px 20px;
+/* LARGE DESKTOP */
+@media (min-width: 1200px) {
+
+    .hero {
+        min-height: 90vh;
     }
 
-    .hero h1 {
-        font-size: 3rem;
+    .about,
+    .links {
+        width: min(100%, 1050px);
     }
 }
