@@ -31,39 +31,68 @@
     />
     <meta property="og:type" content="website" />
   </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Portal Master Of Games — Channel Live Tracker</h1>
-        <p class="intro">
-          Stay updated with the latest numbers from the Portal Master Of Games
-          YouTube channel. See live subscriber counts, total views, and uploads
-          in real-time.
-        </p>
-      </header>
-
-      <section class="stats">
-        <div class="stat-card">
-          <div class="label">Current Subscribers</div>
-          <div class="number" id="subscribers">0</div>
-        </div>
-        <div class="stat-card">
-          <div class="label">Total Channel Views</div>
-          <div class="number" id="views">0</div>
-        </div>
-        <div class="stat-card">
-          <div class="label">Uploaded Videos</div>
-          <div class="number" id="videos">0</div>
-        </div>
-      </section>
-
-      <footer>
-        <p>
-          Data refreshes automatically. Powered by
-          <a href="https://creatorpromote.com">Creator Promote</a>.
-        </p>
-      </footer>
+<body>
+  <main class="container">
+    <div class="profile">
+      <img src="images/bg.png" alt="Portal Master Of Games profile picture" />
+      <div>
+        <p class="tag">YouTube Channel</p>
+        <h1>Portal Master Of Games</h1>
+      </div>
     </div>
-    <script src="js/live.js"></script>
-  </body>
+
+    <div class="live-row">
+      <span id="liveDot" class="dot offline"></span>
+      <span id="liveStatus">Checking status...</span>
+    </div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="label">Subscribers</div>
+    <div class="number" id="subscribers">0</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="label">Views</div>
+    <div class="number" id="views">0</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="label">Videos</div>
+    <div class="number" id="videos">0</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="label">Status</div>
+    <div class="number small-number" id="liveStatus">Checking...</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="label">Last Update</div>
+    <div class="number small-number" id="updated">--:--</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="label">Clock</div>
+    <div class="number small-number" id="clock">--:--</div>
+  </div>
+</div>
+
+<div class="goal-box">
+  <div class="goal-top">
+    <span>Next Subscriber Goal</span>
+    <strong id="goalText">Loading...</strong>
+  </div>
+  <div class="goal-bar">
+    <div id="goalFill"></div>
+  </div>
+</div>
+
+    <div class="actions">
+      <a href="https://www.youtube.com/@PMOG" target="_blank">Visit Channel</a>
+    </div>
+  </main>
+
+  <script src="js/live.js"></script>
+</body>
 </html>
