@@ -8,7 +8,7 @@ const books = [
     status: "Available",
     description: "Fantasy mystery about an archive, a coin, and an impossible road.",
     coverImage: "images/book1-cover.jpg",
-    pageLink: "https://creatorpromote.com/portalmasterofgames/fools-stage/the-flipside-of-knowlage",
+    pageLink: "https://creatorpromote.com/portalmasterofgames/fools-stage/books/the-flip-side-of-knowledge/the-flipside-of-knowlage",
     color: "blue"
   },
   {
