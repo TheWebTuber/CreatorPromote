@@ -8,7 +8,7 @@ const books = [
     status: "Available",
     description: "Fantasy mystery about an archive, a coin, and an impossible road.",
     coverImage: "images/book1-cover.jpg",
-    pageLink: "https://creatorpromote.com/portalmasterofgames/fools-stage/books/the-flip-side-of-knowledge/the-flipside-of-knowlage",
+    pageLink: "https://creatorpromote.com/portalmasterofgames/fools-stage/books/the-flip-side-of-knowledge/",
     color: "blue"
   },
   {
@@ -20,7 +20,7 @@ const books = [
     status: "Available",
     description: "A memory-focused fantasy mystery and the second Fool's Stage book.",
     coverImage: "images/book2-cover.jpg",
-    pageLink: "#",
+    pageLink: "https://creatorpromote.com/portalmasterofgames/fools-stage/books/burned-memories-and-made-up-apologies/",
     color: "red"
   },
   {
@@ -32,7 +32,7 @@ const books = [
     status: "Available",
     description: "The final Fool's Stage book.",
     coverImage: "images/book3-cover.jpg",
-    pageLink: "#",
+    pageLink: "https://creatorpromote.com/portalmasterofgames/fools-stage/books/go-home/",
     color: "gray"
   },
   {
