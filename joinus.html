@@ -61,12 +61,12 @@
             <h2>An idea.<br />A reference.<br />A conversation.</h2>
             <p>
               This page helps you put a clear brief together. Once it’s ready,
-              copy it and send it to PMOG through the contact links.
+              review it and press Send request to email it to PMOG.
             </p>
             <ol class="compact-steps">
               <li><span>01</span>Explain what your website is for.</li>
               <li><span>02</span>Show the style and features you like.</li>
-              <li><span>03</span>Copy your brief and contact me.</li>
+              <li><span>03</span>Review your brief and press Send request.</li>
             </ol>
             <a
               class="text-link"
@@ -102,7 +102,7 @@
               <h2>A good place to start.</h2>
               <p>
                 Fields marked <span aria-hidden="true">*</span> are required.
-                This form prepares a message; it doesn’t send one.
+                Review your brief, then press Send request to email it to info@creatorpromote.com.
               </p>
             </div>
             <fieldset>
@@ -139,11 +139,17 @@
               <div class="field">
                 <label for="request-type">What kind of website?</label
                 ><select id="request-type" name="type">
-                  <option>Personal or creator website</option>
+                  <option>Personal website</option>
+                  <option>Creator or streamer website</option>
                   <option>Portfolio or art showcase</option>
-                  <option>Project or book page</option>
-                  <option>Community website</option>
-                  <option>Something else</option>
+                  <option>Business or freelance services</option>
+                  <option>Project or product showcase</option>
+                  <option>Community, club, or organisation</option>
+                  <option>Event or campaign page</option>
+                  <option>Blog or informational website</option>
+                  <option>Link page or simple landing page</option>
+                  <option>Shop or merchandise showcase</option>
+                  <option>Something else — describe it below</option>
                 </select>
               </div>
               <div class="field">
@@ -197,19 +203,21 @@
               <legend><span>03</span> References &amp; content</legend>
               <div class="field">
                 <label for="request-reference"
-                  >A website, moodboard, or reference link
+                  >Reference links — websites, moodboards, or examples
                   <span aria-hidden="true">*</span></label
-                ><input
+                ><textarea
                   id="request-reference"
                   name="reference"
-                  type="url"
+                  rows="3"
                   required
-                  maxlength="2000"
-                  placeholder="https://…"
-                />
-                <p class="field-help">
-                  Use a public link. Screenshots can be shared when you contact
-                  me.
+                  maxlength="8000"
+                  aria-describedby="reference-help"
+                  placeholder="https://example.com, https://another-example.com,"
+                ></textarea>
+                <p id="reference-help" class="field-help">
+                  You can add more than one public link. Separate links with a
+                  comma or put each link on a new line. A comma after the last
+                  link is fine. Screenshots can be shared as a public link too.
                 </p>
               </div>
               <div class="field">
@@ -270,8 +278,8 @@
               Build my request <span aria-hidden="true">↗</span>
             </button>
             <p class="field-help privacy-note">
-              This tool doesn’t upload or store your answers. Share only what
-              you’re comfortable sending to PMOG.
+              Your answers stay on this page until you press Send request.
+              Sending shares your brief with PMOG via FormSubmit.
             </p>
           </form>
           <section
@@ -283,8 +291,9 @@
             <p class="eyebrow">Ready for a conversation</p>
             <h2 id="result-title" tabindex="-1">Your brief is ready.</h2>
             <p>
-              <strong>It hasn’t been sent.</strong> Copy or download it, open
-              PMOG’s contact links, and send it through your preferred channel.
+              <strong>It hasn’t been sent yet.</strong> Review your brief, then
+              press Send request to email it to info@creatorpromote.com.
+              A quick verification may appear before sending.
             </p>
             <label for="brief-output">Your message to PMOG</label
             ><textarea id="brief-output" rows="15" readonly></textarea>
@@ -297,12 +306,21 @@
                 type="button"
               >
                 Download .txt</button
-              ><a
-                class="button secondary"
-                href="https://pmog.creatorpromote.com/links"
-                data-contact-link
-                >Contact PMOG <span aria-hidden="true">↗</span></a
               >
+              <form
+                id="send-request-form"
+                action="https://formsubmit.co/info@creatorpromote.com"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New website request | CreatorPromote" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="name" id="send-name" />
+                <input type="hidden" name="contact" id="send-contact" />
+                <input type="hidden" name="message" id="send-message" />
+                <button class="button" id="send-request" type="submit">
+                  Send request <span aria-hidden="true">↗</span>
+                </button>
+              </form>
             </div>
             <p
               id="copy-status"

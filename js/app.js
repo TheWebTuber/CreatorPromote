@@ -1,4 +1,4 @@
-/* CreatorPromote: small, independent enhancements. No trackers or backend. */
+/* CreatorPromote: request briefs, FormSubmit email delivery, and directory filters. */
 (() => {
   'use strict';
 
@@ -21,6 +21,9 @@
     const output = document.getElementById('brief-output');
     const status = document.getElementById('copy-status');
     const resultTitle = document.getElementById('result-title');
+    const sendForm = document.getElementById('send-request-form');
+    const sendButton = document.getElementById('send-request');
+    let submitting = false;
     form.hidden = false;
 
     function normalizeDomain(value) {
@@ -54,11 +57,26 @@
         if (!field.reportValidity()) return;
       }
       const reference = document.getElementById('request-reference');
-      let validReference = false;
-      try {
-        validReference = ['http:', 'https:'].includes(new URL(get('reference')).protocol);
-      } catch { /* The field displays a validation message below. */ }
-      reference.setCustomValidity(validReference ? '' : 'Please use a public http:// or https:// reference link.');
+      const references = get('reference').split(/[,\r\n]+/).map(link => link.trim()).filter(Boolean);
+      let invalidIndex = -1;
+      references.some((link, index) => {
+        try {
+          const url = new URL(link);
+          if (!/^https?:\/\//i.test(link) || !['http:', 'https:'].includes(url.protocol) || !url.hostname || url.username || url.password || /\s/.test(link)) {
+            invalidIndex = index;
+            return true;
+          }
+        } catch {
+          invalidIndex = index;
+          return true;
+        }
+        return false;
+      });
+      reference.setCustomValidity(!references.length
+        ? 'Add at least one public reference link, starting with https://.'
+        : invalidIndex >= 0
+          ? `Reference link ${invalidIndex + 1} is not valid. Use a full http:// or https:// link and separate links with commas or new lines.`
+          : '');
       if (!reference.reportValidity()) return;
 
       output.value = [
@@ -76,7 +94,7 @@
         domain ? `${domain}.creatorpromote.com (subject to availability and agreement)` : 'Not decided yet — happy to discuss a name.',
         '',
         'REFERENCES',
-        get('reference'),
+        references.map((link, index) => `${index + 1}. ${link}`).join('\n'),
         `What I like: ${get('style')}`,
         '',
         'PAGES & CONTENT',
@@ -90,10 +108,37 @@
         '',
         'I understand this is a request, not a booking or a name reservation. Scope, hosting, timing, and any costs need to be agreed with PMOG.'
       ].join('\n');
+      document.getElementById('send-name').value = get('name');
+      document.getElementById('send-contact').value = get('contact');
+      document.getElementById('send-message').value = output.value;
+      submitting = false;
+      sendButton.disabled = false;
+      sendButton.textContent = 'Send request ↗';
       status.textContent = '';
       form.hidden = true;
       result.hidden = false;
       resultTitle.focus();
+    });
+
+    // This is a regular HTTPS form POST. No mail app, API key, or client-side SMTP.
+    // FormSubmit handles email delivery, its verification step, and confirmation.
+    sendForm.addEventListener('submit', event => {
+      if (submitting || !output.value) {
+        event.preventDefault();
+        return;
+      }
+      document.getElementById('send-message').value = output.value;
+      submitting = true;
+      sendButton.disabled = true;
+      sendButton.textContent = 'Sending…';
+      status.textContent = 'Opening secure verification and submission. Your brief stays available here if you need to come back.';
+    });
+    // Restore the send button when returning from the provider with Back.
+    window.addEventListener('pageshow', () => {
+      submitting = false;
+      sendButton.disabled = false;
+      sendButton.textContent = 'Send request ↗';
+      status.textContent = '';
     });
 
     // Clear custom validation as the visitor corrects a field.
@@ -113,7 +158,7 @@
       try {
         if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
         await navigator.clipboard.writeText(output.value);
-        status.textContent = 'Copied. Open Contact PMOG and paste your request into a message.';
+        status.textContent = 'Copied. You can also press Send request to email your brief directly to PMOG.';
       } catch {
         output.focus();
         output.select();
