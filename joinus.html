@@ -1,51 +1,355 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f7fb">
-  <title>Join us · Request your website | CreatorPromote</title>
-  <meta name="description" content="Prepare a clear website request with your idea, references, and preferred CreatorPromote subdomain. Contact PMOG to discuss your project.">
-  <link rel="canonical" href="https://creatorpromote.com/joinus/">
-  <meta property="og:title" content="Join us · Request your website | CreatorPromote">
-  <meta property="og:description" content="Prepare a clear website request with your idea, references, and preferred CreatorPromote subdomain. Contact PMOG to discuss your project.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://creatorpromote.com/joinus/">
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/work.css">
-  <script src="js/app.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="header-inner shell">
-      <a class="brand" href="/" aria-label="CreatorPromote home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>creator<span class="brand-light">promote</span><span class="brand-dot">.</span></span></a>
-      <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/channelsearch/">Find a site</a><a href="/joinus/" aria-current="page">Join us</a></nav>
-      <a class="button small header-cta" href="/joinus/">Start a project <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
-  <main id="main">
-    <section class="page-intro shell"><p class="eyebrow">Join CreatorPromote</p><h1>Let’s make<br><span class="accent-text">your space.</span></h1><p class="lead">Tell me what you have in mind, give me useful references, and we’ll see if it’s a good fit.</p></section>
-    <section class="shell request-layout section-tight">
-      <aside class="request-aside"><div class="aside-card"><span class="card-number">A GOOD REQUEST STARTS HERE</span><h2>An idea.<br>A reference.<br>A conversation.</h2><p>This page helps you put a clear brief together. Once it’s ready, copy it and send it to PMOG through the contact links.</p><ol class="compact-steps"><li><span>01</span>Explain what your website is for.</li><li><span>02</span>Show the style and features you like.</li><li><span>03</span>Copy your brief and contact me.</li></ol><a class="text-link" href="https://pmog.creatorpromote.com/links" data-contact-link>Go straight to contact <span aria-hidden="true">↗</span></a></div><div class="aside-note"><h3>About free and paid work</h3><p>I often build for free when a project interests me. I take on projects individually, depending on interest and time. Extra work may be paid if we agree first. Tips are optional.</p></div></aside>
-      <div class="request-main"><noscript><div class="notice"><h2>Send a request directly</h2><p>JavaScript is needed to build a brief here. You can still <a href="https://pmog.creatorpromote.com/links">contact PMOG</a>. Include your name, website idea, preferred address, references, content, and any extra features.</p></div></noscript>
-        <form id="request-form" class="brief-form" hidden>
-          <div class="form-heading"><span class="card-number">YOUR WEBSITE BRIEF</span><h2>A good place to start.</h2><p>Fields marked <span aria-hidden="true">*</span> are required. This form prepares a message; it doesn’t send one.</p></div>
-          <fieldset><legend><span>01</span> You &amp; your idea</legend><div class="field-grid"><div class="field"><label for="request-name">Your name or creator name <span aria-hidden="true">*</span></label><input id="request-name" name="name" autocomplete="name" required maxlength="100" placeholder="What should I call you?"></div><div class="field"><label for="request-contact">How to reach you <span aria-hidden="true">*</span></label><input id="request-contact" name="contact" required maxlength="200" placeholder="Email or social handle"><p class="field-help">Include the platform if you use a social handle.</p></div></div><div class="field"><label for="request-type">What kind of website?</label><select id="request-type" name="type"><option>Personal or creator website</option><option>Portfolio or art showcase</option><option>Project or book page</option><option>Community website</option><option>Something else</option></select></div><div class="field"><label for="request-idea">Tell me about your idea <span aria-hidden="true">*</span></label><textarea id="request-idea" name="idea" rows="4" required maxlength="4000" placeholder="Who is it for? What do you want people to see or do?"></textarea></div></fieldset>
-          <fieldset><legend><span>02</span> Your website address</legend><div class="field"><label for="request-domain">Preferred name <span class="optional">(optional)</span></label><input id="request-domain" name="domain" maxlength="63" pattern="[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?" aria-describedby="domain-help domain-preview" placeholder="yourname" spellcheck="false" autocapitalize="none"><p id="domain-help" class="field-help">Enter only the first part: letters, numbers, or hyphens, with no hyphen at the beginning or end.</p></div><div class="request-domain-preview"><span class="panel-caption">YOUR SUGGESTED ADDRESS</span><p id="domain-preview"><span id="domain-name">yourname</span><wbr>.creatorpromote.com</p><span>Preview only. Availability is checked when we discuss the project.</span></div></fieldset>
-          <fieldset><legend><span>03</span> References &amp; content</legend><div class="field"><label for="request-reference">A website, moodboard, or reference link <span aria-hidden="true">*</span></label><input id="request-reference" name="reference" type="url" required maxlength="2000" placeholder="https://…"><p class="field-help">Use a public link. Screenshots can be shared when you contact me.</p></div><div class="field"><label for="request-style">What do you like about it? <span aria-hidden="true">*</span></label><textarea id="request-style" name="style" rows="3" required maxlength="3000" placeholder="For example: the layout, colours, simple navigation, or a particular feature. Add more reference links here if useful."></textarea></div><div class="field"><label for="request-pages">Pages, text &amp; images <span class="optional">(optional)</span></label><textarea id="request-pages" name="pages" rows="3" maxlength="4000" placeholder="Which pages do you need? What content do you already have? Include links to your work if you have them."></textarea></div></fieldset>
-          <fieldset><legend><span>04</span> Extras &amp; expectations</legend><div class="field"><label for="request-arrangement">Your preference</label><select id="request-arrangement" name="arrangement"><option>Ask whether this could be a free project</option><option>Open to discussing paid work or extras</option><option>Not sure — let’s discuss it</option></select></div><div class="field"><label for="request-extras">Anything else? <span class="optional">(optional)</span></label><textarea id="request-extras" name="extras" rows="3" maxlength="3000" placeholder="Extra features, budget if relevant, a deadline, or how often you expect to update the site."></textarea></div><p class="form-note">Projects, names, timing, hosting, and any costs are agreed individually. A prepared brief is not a booking or a name reservation.</p></fieldset>
-          <button class="button" type="submit">Build my request <span aria-hidden="true">↗</span></button>
-          <p class="field-help privacy-note">This tool doesn’t upload or store your answers. Share only what you’re comfortable sending to PMOG.</p>
-        </form>
-        <section id="brief-result" class="brief-result" hidden aria-labelledby="result-title"><p class="eyebrow">Ready for a conversation</p><h2 id="result-title" tabindex="-1">Your brief is ready.</h2><p><strong>It hasn’t been sent.</strong> Copy or download it, open PMOG’s contact links, and send it through your preferred channel.</p><label for="brief-output">Your message to PMOG</label><textarea id="brief-output" rows="15" readonly></textarea><div class="actions"><button class="button" id="copy-brief" type="button">Copy my brief</button><button class="button secondary" id="download-brief" type="button">Download .txt</button><a class="button secondary" href="https://pmog.creatorpromote.com/links" data-contact-link>Contact PMOG <span aria-hidden="true">↗</span></a></div><p id="copy-status" class="status" role="status" aria-live="polite"></p><button type="button" class="text-button" id="edit-brief">← Edit my answers</button></section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Join us · Request your website | CreatorPromote</title>
+    <meta
+      name="description"
+      content="Prepare a clear website request with your idea, references, and preferred CreatorPromote subdomain. Contact PMOG to discuss your project."
+    />
+    <link rel="canonical" href="https://creatorpromote.com/joinus/" />
+    <meta
+      property="og:title"
+      content="Join us · Request your website | CreatorPromote"
+    />
+    <meta
+      property="og:description"
+      content="Prepare a clear website request with your idea, references, and preferred CreatorPromote subdomain. Contact PMOG to discuss your project."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://creatorpromote.com/joinus" />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/work.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner shell">
+        <a class="brand" href="/" aria-label="CreatorPromote home"
+          ><span class="brand-mark" aria-hidden="true"
+            ><i></i><i></i><i></i><i></i></span
+          ><span
+            >creator<span class="brand-light">promote</span
+            ><span class="brand-dot">.</span></span
+          ></a
+        >
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/">Home</a><a href="/channelsearch">Find a site</a
+          ><a href="/joinus" aria-current="page">Join us</a>
+        </nav>
+        <a class="button small header-cta" href="/joinus"
+          >Start a project <span aria-hidden="true">↗</span></a
+        >
       </div>
-    </section>
-    <section class="shell simple-contact"><p>Already have a brief ready?</p><a class="text-link" href="https://pmog.creatorpromote.com/links" data-contact-link>Contact PMOG directly <span aria-hidden="true">↗</span></a></section>
-  </main>
-  <footer class="site-footer">
-    <div class="shell footer-top"><div><a class="brand" href="/">creator<span class="brand-light">promote</span><span class="brand-dot">.</span></a><p>Personal websites. Shared ideas. A place to begin.</p></div><div class="footer-links"><a href="/joinus/">Request a website</a><a href="/channelsearch/">Explore the directory</a><a href="https://pmog.creatorpromote.com/links" data-contact-link>Contact PMOG <span aria-hidden="true">↗</span></a></div></div>
-    <div class="shell footer-bottom"><p>An independent project by <a href="https://pmog.creatorpromote.com/">PMOG</a>.</p><p>Made for people with something to share.</p></div>
-  </footer>
-</body>
+    </header>
+    <main id="main">
+      <section class="page-intro shell">
+        <p class="eyebrow">Join CreatorPromote</p>
+        <h1>Let’s make<br /><span class="accent-text">your space.</span></h1>
+        <p class="lead">
+          Tell me what you have in mind, give me useful references, and we’ll
+          see if it’s a good fit.
+        </p>
+      </section>
+      <section class="shell request-layout section-tight">
+        <aside class="request-aside">
+          <div class="aside-card">
+            <span class="card-number">A GOOD REQUEST STARTS HERE</span>
+            <h2>An idea.<br />A reference.<br />A conversation.</h2>
+            <p>
+              This page helps you put a clear brief together. Once it’s ready,
+              copy it and send it to PMOG through the contact links.
+            </p>
+            <ol class="compact-steps">
+              <li><span>01</span>Explain what your website is for.</li>
+              <li><span>02</span>Show the style and features you like.</li>
+              <li><span>03</span>Copy your brief and contact me.</li>
+            </ol>
+            <a
+              class="text-link"
+              href="https://pmog.creatorpromote.com/links"
+              data-contact-link
+              >Go straight to contact <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="aside-note">
+            <h3>About free and paid work</h3>
+            <p>
+              I often build for free when a project interests me. I take on
+              projects individually, depending on interest and time. Extra work
+              may be paid if we agree first. Tips are optional.
+            </p>
+          </div>
+        </aside>
+        <div class="request-main">
+          <noscript
+            ><div class="notice">
+              <h2>Send a request directly</h2>
+              <p>
+                JavaScript is needed to build a brief here. You can still
+                <a href="https://pmog.creatorpromote.com/links">contact PMOG</a
+                >. Include your name, website idea, preferred address,
+                references, content, and any extra features.
+              </p>
+            </div></noscript
+          >
+          <form id="request-form" class="brief-form" hidden>
+            <div class="form-heading">
+              <span class="card-number">YOUR WEBSITE BRIEF</span>
+              <h2>A good place to start.</h2>
+              <p>
+                Fields marked <span aria-hidden="true">*</span> are required.
+                This form prepares a message; it doesn’t send one.
+              </p>
+            </div>
+            <fieldset>
+              <legend><span>01</span> You &amp; your idea</legend>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="request-name"
+                    >Your name or creator name
+                    <span aria-hidden="true">*</span></label
+                  ><input
+                    id="request-name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    maxlength="100"
+                    placeholder="What should I call you?"
+                  />
+                </div>
+                <div class="field">
+                  <label for="request-contact"
+                    >How to reach you <span aria-hidden="true">*</span></label
+                  ><input
+                    id="request-contact"
+                    name="contact"
+                    required
+                    maxlength="200"
+                    placeholder="Email or social handle"
+                  />
+                  <p class="field-help">
+                    Include the platform if you use a social handle.
+                  </p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="request-type">What kind of website?</label
+                ><select id="request-type" name="type">
+                  <option>Personal or creator website</option>
+                  <option>Portfolio or art showcase</option>
+                  <option>Project or book page</option>
+                  <option>Community website</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="request-idea"
+                  >Tell me about your idea
+                  <span aria-hidden="true">*</span></label
+                ><textarea
+                  id="request-idea"
+                  name="idea"
+                  rows="4"
+                  required
+                  maxlength="4000"
+                  placeholder="Who is it for? What do you want people to see or do?"
+                ></textarea>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span>02</span> Your website address</legend>
+              <div class="field">
+                <label for="request-domain"
+                  >Preferred name
+                  <span class="optional">(optional)</span></label
+                ><input
+                  id="request-domain"
+                  name="domain"
+                  maxlength="63"
+                  pattern="[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?"
+                  aria-describedby="domain-help domain-preview"
+                  placeholder="yourname"
+                  spellcheck="false"
+                  autocapitalize="none"
+                />
+                <p id="domain-help" class="field-help">
+                  Enter only the first part: letters, numbers, or hyphens, with
+                  no hyphen at the beginning or end.
+                </p>
+              </div>
+              <div class="request-domain-preview">
+                <span class="panel-caption">YOUR SUGGESTED ADDRESS</span>
+                <p id="domain-preview">
+                  <span id="domain-name">yourname</span
+                  ><wbr />.creatorpromote.com
+                </p>
+                <span
+                  >Preview only. Availability is checked when we discuss the
+                  project.</span
+                >
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span>03</span> References &amp; content</legend>
+              <div class="field">
+                <label for="request-reference"
+                  >A website, moodboard, or reference link
+                  <span aria-hidden="true">*</span></label
+                ><input
+                  id="request-reference"
+                  name="reference"
+                  type="url"
+                  required
+                  maxlength="2000"
+                  placeholder="https://…"
+                />
+                <p class="field-help">
+                  Use a public link. Screenshots can be shared when you contact
+                  me.
+                </p>
+              </div>
+              <div class="field">
+                <label for="request-style"
+                  >What do you like about it?
+                  <span aria-hidden="true">*</span></label
+                ><textarea
+                  id="request-style"
+                  name="style"
+                  rows="3"
+                  required
+                  maxlength="3000"
+                  placeholder="For example: the layout, colours, simple navigation, or a particular feature. Add more reference links here if useful."
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="request-pages"
+                  >Pages, text &amp; images
+                  <span class="optional">(optional)</span></label
+                ><textarea
+                  id="request-pages"
+                  name="pages"
+                  rows="3"
+                  maxlength="4000"
+                  placeholder="Which pages do you need? What content do you already have? Include links to your work if you have them."
+                ></textarea>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span>04</span> Extras &amp; expectations</legend>
+              <div class="field">
+                <label for="request-arrangement">Your preference</label
+                ><select id="request-arrangement" name="arrangement">
+                  <option>Ask whether this could be a free project</option>
+                  <option>Open to discussing paid work or extras</option>
+                  <option>Not sure — let’s discuss it</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="request-extras"
+                  >Anything else?
+                  <span class="optional">(optional)</span></label
+                ><textarea
+                  id="request-extras"
+                  name="extras"
+                  rows="3"
+                  maxlength="3000"
+                  placeholder="Extra features, budget if relevant, a deadline, or how often you expect to update the site."
+                ></textarea>
+              </div>
+              <p class="form-note">
+                Projects, names, timing, hosting, and any costs are agreed
+                individually. A prepared brief is not a booking or a name
+                reservation.
+              </p>
+            </fieldset>
+            <button class="button" type="submit">
+              Build my request <span aria-hidden="true">↗</span>
+            </button>
+            <p class="field-help privacy-note">
+              This tool doesn’t upload or store your answers. Share only what
+              you’re comfortable sending to PMOG.
+            </p>
+          </form>
+          <section
+            id="brief-result"
+            class="brief-result"
+            hidden
+            aria-labelledby="result-title"
+          >
+            <p class="eyebrow">Ready for a conversation</p>
+            <h2 id="result-title" tabindex="-1">Your brief is ready.</h2>
+            <p>
+              <strong>It hasn’t been sent.</strong> Copy or download it, open
+              PMOG’s contact links, and send it through your preferred channel.
+            </p>
+            <label for="brief-output">Your message to PMOG</label
+            ><textarea id="brief-output" rows="15" readonly></textarea>
+            <div class="actions">
+              <button class="button" id="copy-brief" type="button">
+                Copy my brief</button
+              ><button
+                class="button secondary"
+                id="download-brief"
+                type="button"
+              >
+                Download .txt</button
+              ><a
+                class="button secondary"
+                href="https://pmog.creatorpromote.com/links"
+                data-contact-link
+                >Contact PMOG <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <p
+              id="copy-status"
+              class="status"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <button type="button" class="text-button" id="edit-brief">
+              ← Edit my answers
+            </button>
+          </section>
+        </div>
+      </section>
+      <section class="shell simple-contact">
+        <p>Already have a brief ready?</p>
+        <a
+          class="text-link"
+          href="https://pmog.creatorpromote.com/links"
+          data-contact-link
+          >Contact PMOG directly <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-top">
+        <div>
+          <a class="brand" href="/"
+            >creator<span class="brand-light">promote</span
+            ><span class="brand-dot">.</span></a
+          >
+          <p>Personal websites. Shared ideas. A place to begin.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/joinus/">Request a website</a
+          ><a href="/channelsearch/">Explore the directory</a
+          ><a href="https://pmog.creatorpromote.com/links" data-contact-link
+            >Contact PMOG <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>
+          An independent project by
+          <a href="https://pmog.creatorpromote.com/">PMOG</a>.
+        </p>
+        <p>Made for people with something to share.</p>
+      </div>
+    </footer>
+  </body>
 </html>
